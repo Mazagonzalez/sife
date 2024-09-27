@@ -1,15 +1,19 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+    <div class="max-w-5xl mx-auto lg:px-0 px-4 py-6">
+        @role('Admin')
+            @livewire('admin.dashboard-live')
+        @endrole
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
-        </div>
+        @role('View')
+            @livewire('view.dashboard-live')
+        @endrole
+
+        @role('Client')
+            @livewire('client.dashboard-live')
+        @endrole
+
+        @role('Provider')
+            @livewire('provider.dashboard-live')
+        @endrole
     </div>
 </x-app-layout>
