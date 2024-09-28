@@ -33,8 +33,8 @@ class CreateUserLive extends Component
 
         $user = User::create([
             'role' => $this->role,
-            'name' => $this->name,
-            'email' => $this->email,
+            'name' => strtoupper($this->name),
+            'email' => strtolower($this->email),
             'password' => $this->password
         ]);
 

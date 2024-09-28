@@ -19,10 +19,10 @@
         @livewireStyles
         <style>[x-cloak] { display: none; }</style>
     </head>
-    <body class="scrollbar" style="font-family: 'Poppins', sans-serif;">
+    <body style="font-family: 'Poppins', sans-serif;">
         <x-banner />
 
-        <div class="min-h-screen bg-gray-100">
+        <div class="min-h-screen overflow-y-auto bg-gray-100 scrollbar">
             @livewire('navigation-menu')
 
             <!-- Page Content -->

@@ -1,5 +1,5 @@
 <div>
-    <div class="w-full gap-3 p-8 border border-gray-300 rounded-3xl col">
+    <div class="w-full h-full gap-3 p-8 border border-gray-300 rounded-3xl col">
         <p class="text-xl font-semibold text-center">Crear Usuario</p>
 
         <div class="col">
