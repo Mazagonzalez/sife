@@ -50,3 +50,6 @@
     @apply hidden lg:block
 }
 
+.err{
+    @apply text-xs font-light text-red-500
+}
