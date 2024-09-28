@@ -10,7 +10,12 @@ class SearchUserLive extends Component
     public $search;
     public $users = [];
 
-    protected $listeners = ['delete-user-susscefull' => 'updatedSearch'];
+    protected $listeners = ['load-search' => 'mount'];
+
+    public function mount()
+    {
+        $this->updatedSearch();
+    }
 
     public function updatedSearch()
     {

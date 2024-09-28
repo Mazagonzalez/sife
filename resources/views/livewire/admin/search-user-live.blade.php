@@ -12,7 +12,6 @@
                 @forelse ($users as $user)
                     <div
                         wire:key='{{ $user->id }}'
-                        wire:transition
                         class="items-center justify-between gap-2 p-3 mx-3 border border-gray-500 rounded-md row"
                     >
                         <div class="col">
@@ -23,6 +22,8 @@
 
                         <div class="gap-2 col">
                             @livewire('admin.delete-user-live', ['user' => $user], key($user->id . 'delete'))
+
+                            @livewire('admin.edit-user-live', ['user' => $user], key($user->id . 'edit'))
                         </div>
                     </div>
                 @empty

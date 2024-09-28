@@ -35,25 +35,17 @@ class CreateUserLive extends Component
             'role' => $this->role,
             'name' => strtoupper($this->name),
             'email' => strtolower($this->email),
-            'password' => $this->password
+            'password' => bcrypt($this->password)
         ]);
 
         $user->assignRole(ucfirst(strtolower($this->role)));
 
         DB::commit();
 
+        $this->dispatch('load-search');
+
         session()->flash('message', $this->role . ' creado con éxito');
 
-        $this->reset([
-            'role',
-            'name',
-            'email',
-            'password'
-        ]);
-    }
-
-    public function clear()
-    {
         $this->reset([
             'role',
             'name',

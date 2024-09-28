@@ -19,7 +19,7 @@ class DeleteUserLive extends Component
 
         DB::commit();
 
-        $this->dispatch('delete-user-susscefull');
+        $this->dispatch('load-search');
     }
 
     public function showModal()

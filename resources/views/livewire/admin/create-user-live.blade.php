@@ -39,17 +39,11 @@
         </div>
 
         @if (session('message'))
-            <span class="text-xs font-light text-emerald-500">{{ session('message') }}</span>
+            <span wire:transition class="text-xs font-light text-emerald-500">{{ session('message') }}</span>
         @endif
 
-        <div class="gap-2 row">
-            <button wire:click='clear' class="w-1/2 py-2 mt-4 text-white bg-gray-500 rounded-md">
-                Limpiar
-            </button>
-
-            <button wire:click='createUser' class="w-1/2 py-2 mt-4 text-white bg-blue-500 rounded-md">
-                Crear Usuario
-            </button>
-        </div>
+        <button wire:click='createUser' class="w-full py-2 text-white bg-blue-500 rounded-md">
+            Crear Usuario
+        </button>
     </div>
 </div>
