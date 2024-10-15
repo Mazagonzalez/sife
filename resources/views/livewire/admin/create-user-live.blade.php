@@ -29,9 +29,11 @@
         <div class="col">
             <select wire:model='role'>
                 <option value="">Selecciona un rol</option>
+                <option value="view">Vista</option>
+                <option value="buyer">Comprador</option>
+                <option value="commercial">Comercial</option>
                 <option value="client">Cliente</option>
                 <option value="provider">Proveedor</option>
-                <option value="view">Vista</option>
             </select>
             @error('role')
                 <span class="err">{{ $message }}</span>
